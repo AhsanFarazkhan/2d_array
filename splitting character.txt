@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string inputString;
+    char delimiter;
+
+    std::cout << "Enter a string: ";
+    std::getline(std::cin, inputString);
+
+    std::cout << "Enter the delimiter character: ";
+    std::cin >> delimiter;
+
+    std::string word;
+    for (char c : inputString) {
+        if (c == delimiter) {
+            std::cout << word << std::endl;
+            word.clear();
+        } else {
+            word += c;
+        }
+    }
+
+    // Print the last word if there is one
+    if (!word.empty()) {
+        std::cout << word << std::endl;
+    }
+
+    return 0;
+}

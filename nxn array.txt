@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+int ar1[2][2]={1,2,3,4};
+int ar2[2][2]={9,8,7,6};
+int ar3[2][2];
+int i,j;
+
+for(i=0;i<2;i++)
+{
+for(j=0;j<2;j++)
+{
+    ar3[i][j]={0};
+    for(int k=0;k<2;k++)
+    {
+
+
+
+ar3[i][j]=ar3[i][j]+ar1[i][k]*ar2[k][j];
+}
+}
+}
+for(i=0;i<2;i++)
+{
+for(j=0;j<2;j++)
+
+{
+cout<<ar3[i][j]<<" ";
+}
+cout<<endl;
+}
+}
